@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".morse">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_700"
+        android:padding="25dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvgfg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:gravity="center"
+            android:text="MORSE CODE CONVERTER"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/etinput"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvgfg"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:gravity="start"
+            android:hint="Type your message to convert!" />
+
+        <!--edit text to accept the input from the user-->
+        <LinearLayout
+            android:id="@+id/llout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etinput"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnencode"
+                android:layout_width="wrap_content"
+                android:layout_height="119dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/mybutton"
+                android:padding="13dp"
+                android:text="EnCode"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnclear"
+                android:layout_width="77dp"
+                android:layout_height="121dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/mybutton"
+                android:padding="13dp"
+                android:text="clear"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btndecode"
+                android:layout_width="wrap_content"
+                android:layout_height="116dp"
+                android:background="@drawable/mybutton"
+                android:padding="13dp"
+                android:text="decode"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--edit text to display output to the user.
+            Edit text is used since the user can copy the
+            text easily if he wants to-->
+        <EditText
+            android:id="@+id/etoutput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llout"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:gravity="start"
+            android:hint="Morse code converted"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
